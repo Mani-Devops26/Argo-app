@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
         - name: cont1
-          image: manikantapaila/newrepo:bustickets
+          image: nginx
           ports:
             - containerPort: 80
