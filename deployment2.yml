@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy2
+  namespace: prod
+  labels:
+    app: v2
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: zomato
+  template:
+    metadata:
+      labels:
+        app: zomato
+    spec:
+      containers:
+        - name: cont1
+          image: manikantapaila/newrepo:food
+          ports:
+            - containerPort: 80
