@@ -6,18 +6,21 @@ metadata:
   namespace: prod
   labels:
     app: v1
+
 spec:
   replicas: 4
   selector:
     matchLabels:
       app: swiggy
+
   template:
-     metadata:
-        labels:
-          app: swiggy
-      spec:
-        containers:
-          - name: cont1
-            image: manikantapaila/newrepo:bustickets
-            ports:
-              - containerPort: 80
+    metadata:
+      labels:
+        app: swiggy
+
+    spec:
+      containers:
+        - name: cont1
+          image: manikantapaila/newrepo:bustickets
+          ports:
+            - containerPort: 80
